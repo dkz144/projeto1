@@ -1,60 +1,52 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* Reseta margens e padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
 }
 
+/* Estilo do cabeçalho */
 header {
-    background-color: #333333;
-    padding: 20px 0;
+    background-color: #333333; /* Cinza escuro */
     color: #f1f1f1;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 100%;
 }
 
+/* Logo */
 .logo {
     font-size: 2em;
     font-weight: bold;
 }
 
-nav {
-    margin-top: 20px;
+/* Menu de navegação */
+nav ul {
+    display: flex;
+    list-style: none;
 }
 
-nav a {
-    color: #f1f1f1;
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
     text-decoration: none;
+    color: #f1f1f1;
     font-size: 1.2em;
     text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #b0b0b0;
-}
-
-.menu-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.submenu {
-    display: none;
-}
-
-nav a:hover + .submenu {
-    display: block;
-    background-color: #444444;
-    padding: 10px;
-}
-
-.submenu a {
-    color: #b0b0b0;
-    padding: 5px;
-    text-decoration: none;
-}
-
-.submenu a:hover {
-    color: #ffffff;
+/* Efeito hover para os links */
+nav ul li a:hover {
+    color: #b0b0b0; /* Cor mais clara no hover */
 }
