@@ -9,45 +9,265 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Estilo do cabeçalho */
+/* Cabeçalho */
 header {
-    background-color: #333333; /* Cor cinza escuro */
-    color: #f1f1f1;
-    padding: 20px 0; /* Espaço acima e abaixo */
-    width: 100%;
+    background-color: #333;
+    padding: 20px 0;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
 }
 
-/* Menu de navegação */
-nav ul {
-    display: flex; /* Alinha os itens do menu em linha */
-    justify-content: center; /* Centraliza os itens no cabeçalho */
-    list-style: none; /* Remove os marcadores da lista */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-nav ul li {
-    margin: 0 20px; /* Espaçamento entre os itens */
+header nav ul li {
+    margin: 0 20px;
 }
 
-nav ul li a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #f1f1f1; /* Cor dos links */
+header nav ul li a {
+    text-decoration: none;
+    color: white;
     font-size: 1.2em;
-    text-transform: uppercase; /* Deixa os textos em maiúsculo */
-    transition: color 0.3s ease;
+    text-transform: uppercase;
 }
 
-/* Efeito hover para os links */
-nav ul li a:hover {
-    color: #b0b0b0; /* Cor mais clara no hover */
+header nav ul li a:hover {
+    color: #b0b0b0;
 }
 
-/* Ajusta a área do corpo da página para que o conteúdo não fique oculto atrás do cabeçalho fixo */
-body {
-    padding-top: 80px; /* Espaço para o cabeçalho fixo */
+/* Banner Principal */
+.hero {
+    background-image: url('https://via.placeholder.com/1920x800');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero .cta-btn {
+    background-color: #ff6347;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.hero .cta-btn:hover {
+    background-color: #e5533e;
+}
+
+/* Imóveis em Destaque */
+.featured-properties {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.featured-properties h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.property-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.property {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.property h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.property p {
+    font-size: 1.2em;
+    color: #ff6347;
+}
+
+/* Benefícios e Serviços */
+.services {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.service p {
+    font-size: 1.1em;
+}
+
+/* Depoimentos */
+.testimonials {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #eeeeee;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonial span {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #555;
+}
+
+/* Localizações Populares */
+.locations {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.locations h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.location-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.location {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.location p {
+    font-size: 1.1em;
+}
+
+/* Contato */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 15px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #e5533e;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
