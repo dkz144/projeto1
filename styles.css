@@ -14,11 +14,11 @@ body {
 
 /* Botão do Menu Hambúrguer */
 .menu-icon {
-    display: none;
+    display: block;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    position: fixed; /* Fixa no canto superior esquerdo */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
     z-index: 101; /* Fica acima de outros conteúdos */
 }
 
