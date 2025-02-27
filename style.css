@@ -13,22 +13,21 @@ body {
 
 /* Estilo do cabeçalho */
 header {
-    background-color: #333333; /* Cinza escuro */
+    background-color: #333333; /* Cor cinza escuro */
     color: #f1f1f1;
+    padding: 20px 0; /* Espaço acima e abaixo */
     width: 100%;
-    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 /* Menu de navegação */
-nav {
-    display: flex;
-    justify-content: center; /* Centraliza o menu no meio da tela */
-    align-items: center;
-}
-
 nav ul {
-    display: flex;
-    list-style: none;
+    display: flex; /* Alinha os itens do menu em linha */
+    justify-content: center; /* Centraliza os itens no cabeçalho */
+    list-style: none; /* Remove os marcadores da lista */
 }
 
 nav ul li {
@@ -36,14 +35,19 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #f1f1f1;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #f1f1f1; /* Cor dos links */
     font-size: 1.2em;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Deixa os textos em maiúsculo */
     transition: color 0.3s ease;
 }
 
 /* Efeito hover para os links */
 nav ul li a:hover {
     color: #b0b0b0; /* Cor mais clara no hover */
+}
+
+/* Ajusta a área do corpo da página para que o conteúdo não fique oculto atrás do cabeçalho fixo */
+body {
+    padding-top: 80px; /* Espaço para o cabeçalho fixo */
 }
