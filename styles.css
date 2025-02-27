@@ -12,36 +12,60 @@ body {
     color: #333;
 }
 
-/* Cabeçalho */
-header {
+/* Botão do Menu */
+.menu-btn {
+    display: none;
     background-color: #333;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 101; /* Fica acima de outros conteúdos */
 }
 
-header nav ul {
+.menu-btn:hover {
+    background-color: #e5533e;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px; /* Abaixo do botão */
+    width: 100%;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    padding: 10px 0;
 }
 
-header nav ul li {
+nav ul li {
     margin: 0 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.2em;
     text-transform: uppercase;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     color: #b0b0b0;
+}
+
+/* Ocultar o menu por padrão */
+.hidden {
+    display: none;
 }
 
 /* Banner Principal */
@@ -278,94 +302,50 @@ footer {
 
 /* Media Query para telas menores (celulares e tablets) */
 @media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column; /* Coloca os links em coluna */
-        padding: 20px 0;
+    .menu-btn {
+        display: block; /* Exibe o botão do menu */
     }
 
-    header nav ul li {
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
         margin: 10px 0;
-    }
-
-    .hero h1 {
-        font-size: 2em; /* Diminui o tamanho do título no banner */
-    }
-
-    .hero p {
-        font-size: 1.2em; /* Diminui o tamanho do texto no banner */
-    }
-
-    .hero .cta-btn {
-        font-size: 1em; /* Ajusta o tamanho do botão */
-        padding: 10px 20px;
-    }
-
-    .property-list,
-    .service-list,
-    .testimonial-list,
-    .location-list {
-        flex-direction: column; /* Faz os itens ficarem em uma coluna */
-        gap: 30px;
-    }
-
-    .property,
-    .service,
-    .testimonial,
-    .location {
-        width: 90%; /* Ajusta a largura dos itens */
-    }
-
-    .property h3 {
-        font-size: 1.3em; /* Ajusta o tamanho do título */
-    }
-
-    .property p {
-        font-size: 1em; /* Ajusta o tamanho da descrição */
-    }
-
-    .services h2,
-    .testimonials h2,
-    .locations h2 {
-        font-size: 2em; /* Ajusta o tamanho do título dessas seções */
-    }
-
-    .contact form {
-        width: 90%;
-    }
-
-    .contact input,
-    .contact textarea {
-        font-size: 1em; /* Ajuste no tamanho das fontes dos inputs */
-    }
-
-    .contact button {
-        font-size: 1em; /* Ajuste no tamanho do botão */
     }
 }
 
 /* Media Query para telas muito pequenas (smartphones, por exemplo) */
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.5em; /* Ajuste ainda mais no título */
+        font-size: 1.5em;
     }
 
     .hero p {
-        font-size: 1em; /* Ajuste do texto no banner */
+        font-size: 1em;
     }
 
     .property {
-        width: 100%; /* Faz os imóveis ocuparem toda a largura */
+        width: 100%;
     }
 
     .property img {
-        height: auto; /* Ajusta a imagem */
+        height: auto;
     }
 
     .property h3 {
-        font-size: 1.2em; /* Ajuste no título */
+        font-size: 1.2em;
     }
 
     .property p {
-        font-size: 0.9em; /* Ajuste na descrição */
+        font-size: 0.9em;
     }
 }
