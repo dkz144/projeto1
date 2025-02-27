@@ -8,19 +8,20 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="imoveis.html">Imóveis</a></li>  <!-- Redirecionando para a página imoveis.html -->
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Botão para Mostrar/Ocultar Menu -->
+    <button id="menu-toggle" class="menu-toggle-btn">Menu</button>
+
+    <!-- Menu (inicialmente escondido) -->
+    <nav id="menu" class="hidden">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="imoveis.html">Imóveis</a></li>  <!-- Redirecionando para a página imoveis.html -->
+            <li><a href="#">Quem Somos</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
 
     <!-- Banner Principal (Hero) -->
     <section class="hero">
@@ -125,28 +126,35 @@
         <p>&copy; 2025 Corretora Imobiliária X | Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      // Inicializa o EmailJS com seu User ID
+      (function() {
+        emailjs.init("Ffdo11ZUv5xI3n0T7"); // Substitua YOUR_USER_ID pelo seu User ID
+      })();
+
+      // Função para enviar o formulário quando ele for enviado
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();  // Previne o comportamento padrão de envio do formulário
+
+        var form = event.target;
+
+        // Envia o formulário para o EmailJS usando o Service ID e Template ID
+        emailjs.sendForm("service_4igai0e", "template_l0ickar", form)
+          .then(function(response) {
+            alert('Mensagem enviada com sucesso!');
+          }, function(error) {
+            alert('Erro ao enviar a mensagem');
+          });
+      });
+
+      // Script para alternar o menu
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+
+      menuToggle.addEventListener("click", function() {
+        menu.classList.toggle("hidden"); // Alterna a classe "hidden"
+      });
+    </script>
 </body>
 </html>
-
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Inicializa o EmailJS com seu User ID
-  (function() {
-    emailjs.init("Ffdo11ZUv5xI3n0T7"); // Substitua YOUR_USER_ID pelo seu User ID
-  })();
-
-  // Função para enviar o formulário quando ele for enviado
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();  // Previne o comportamento padrão de envio do formulário
-
-    var form = event.target;
-
-    // Envia o formulário para o EmailJS usando o Service ID e Template ID
-    emailjs.sendForm("service_4igai0e", "template_l0ickar", form)
-      .then(function(response) {
-        alert('Mensagem enviada com sucesso!');
-      }, function(error) {
-        alert('Erro ao enviar a mensagem');
-      });
-  });
-</script>
