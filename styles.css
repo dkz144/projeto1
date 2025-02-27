@@ -12,23 +12,22 @@ body {
     color: #333;
 }
 
-/* Botão do Menu */
-.menu-btn {
+/* Botão do Menu Hambúrguer */
+.menu-icon {
     display: none;
-    background-color: #333;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: none;
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 101; /* Fica acima de outros conteúdos */
 }
 
-.menu-btn:hover {
-    background-color: #e5533e;
+.menu-icon .bar {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.3s;
 }
 
 /* Menu */
@@ -37,19 +36,21 @@ nav {
     justify-content: center;
     background-color: #333;
     position: absolute;
-    top: 60px; /* Abaixo do botão */
+    top: 60px;
     width: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    display: none; /* O menu começa escondido */
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
     list-style: none;
-    padding: 10px 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 15px 0;
 }
 
 nav ul li a {
@@ -66,6 +67,11 @@ nav ul li a:hover {
 /* Ocultar o menu por padrão */
 .hidden {
     display: none;
+}
+
+/* Mostrar o menu quando a classe hidden for removida */
+nav.show {
+    display: flex;
 }
 
 /* Banner Principal */
@@ -302,8 +308,8 @@ footer {
 
 /* Media Query para telas menores (celulares e tablets) */
 @media (max-width: 768px) {
-    .menu-btn {
-        display: block; /* Exibe o botão do menu */
+    .menu-icon {
+        display: block; /* Exibe o botão do menu hambúrguer */
     }
 
     nav {
@@ -311,15 +317,17 @@ footer {
         position: absolute;
         top: 60px;
         width: 100%;
+        left: 0;
     }
 
-    nav ul {
+    nav.show {
+        display: flex;
         flex-direction: column;
-        padding: 10px 0;
+        align-items: center;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 15px 0;
     }
 }
 
