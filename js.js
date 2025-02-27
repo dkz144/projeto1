@@ -1,7 +1,15 @@
-// Script para alternar o menu
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+// Script para abrir/fechar o menu hambúrguer
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
-menuToggle.addEventListener("click", function() {
-    menu.classList.toggle("show"); // Alterna a classe "show", controlando a visibilidade do menu
+// Abrir ou fechar o menu ao clicar no ícone
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+});
+
+// Fechar o menu ao clicar fora dele
+document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && event.target !== menuToggle) {
+        menu.classList.remove('show');
+    }
 });
