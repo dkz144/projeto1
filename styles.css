@@ -125,7 +125,7 @@ nav.show {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas pequenas */
 }
 
 .property {
@@ -245,10 +245,10 @@ nav.show {
 }
 
 .location {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
     width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -261,32 +261,37 @@ nav.show {
     font-size: 1.1em;
 }
 
-/* Formulário de Contato */
+/* Contato */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
 .contact form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
 }
 
 .contact input,
 .contact textarea {
-    width: 100%;
     padding: 15px;
-    border-radius: 5px;
+    font-size: 1.2em;
     border: 1px solid #ccc;
-    font-size: 1em;
+    border-radius: 5px;
 }
 
 .contact button {
-    padding: 15px 30px;
+    padding: 15px;
     background-color: #ff6347;
     color: white;
     font-size: 1.2em;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .contact button:hover {
@@ -298,5 +303,57 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+}
+
+/* Media Query para telas menores (celulares e tablets) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Exibe o botão do menu hambúrguer */
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+    }
+
+    nav.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+}
+
+/* Media Query para telas muito pequenas (smartphones, por exemplo) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .property {
+        width: 100%;
+    }
+
+    .property img {
+        height: auto;
+    }
+
+    .property h3 {
+        font-size: 1.2em;
+    }
+
+    .property p {
+        font-size: 0.9em;
+    }
 }
