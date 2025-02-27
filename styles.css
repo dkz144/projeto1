@@ -95,6 +95,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas pequenas */
 }
 
 .property {
@@ -137,6 +138,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .service {
@@ -172,6 +174,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .testimonial {
@@ -208,6 +211,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .location {
@@ -270,4 +274,98 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Media Query para telas menores (celulares e tablets) */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Coloca os links em coluna */
+        padding: 20px 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Diminui o tamanho do título no banner */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Diminui o tamanho do texto no banner */
+    }
+
+    .hero .cta-btn {
+        font-size: 1em; /* Ajusta o tamanho do botão */
+        padding: 10px 20px;
+    }
+
+    .property-list,
+    .service-list,
+    .testimonial-list,
+    .location-list {
+        flex-direction: column; /* Faz os itens ficarem em uma coluna */
+        gap: 30px;
+    }
+
+    .property,
+    .service,
+    .testimonial,
+    .location {
+        width: 90%; /* Ajusta a largura dos itens */
+    }
+
+    .property h3 {
+        font-size: 1.3em; /* Ajusta o tamanho do título */
+    }
+
+    .property p {
+        font-size: 1em; /* Ajusta o tamanho da descrição */
+    }
+
+    .services h2,
+    .testimonials h2,
+    .locations h2 {
+        font-size: 2em; /* Ajusta o tamanho do título dessas seções */
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 1em; /* Ajuste no tamanho das fontes dos inputs */
+    }
+
+    .contact button {
+        font-size: 1em; /* Ajuste no tamanho do botão */
+    }
+}
+
+/* Media Query para telas muito pequenas (smartphones, por exemplo) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em; /* Ajuste ainda mais no título */
+    }
+
+    .hero p {
+        font-size: 1em; /* Ajuste do texto no banner */
+    }
+
+    .property {
+        width: 100%; /* Faz os imóveis ocuparem toda a largura */
+    }
+
+    .property img {
+        height: auto; /* Ajusta a imagem */
+    }
+
+    .property h3 {
+        font-size: 1.2em; /* Ajuste no título */
+    }
+
+    .property p {
+        font-size: 0.9em; /* Ajuste na descrição */
+    }
 }
