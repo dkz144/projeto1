@@ -1,351 +1,361 @@
-/* Reseta margens e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Redefinir margens e padding */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 /* Corpo da página */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+body { 
+    font-family: 'Roboto', sans-serif; 
+    background-color: #f4f4f4; 
+    color: #333; 
 }
 
-/* Botão do Menu */
-.menu-btn {
-    display: none;
-    background-color: #333;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 101; /* Fica acima de outros conteúdos */
+/* Cabeçalho */
+header { 
+    background-color: #333; 
+    padding: 20px 0; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 100; 
 }
 
-.menu-btn:hover {
-    background-color: #e5533e;
+header nav ul { 
+    display: flex; 
+    justify-content: center; 
+    list-style: none; 
 }
 
-/* Menu */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    position: absolute;
-    top: 60px; /* Abaixo do botão */
-    width: 100%;
+header nav ul li { 
+    margin: 0 20px; 
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px 0;
+header nav ul li a { 
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.2em; 
+    text-transform: uppercase; 
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    text-transform: uppercase;
-}
-
-nav ul li a:hover {
-    color: #b0b0b0;
-}
-
-/* Ocultar o menu por padrão */
-.hidden {
-    display: none;
+header nav ul li a:hover { 
+    color: #b0b0b0; 
 }
 
 /* Banner Principal */
-.hero {
-    background-image: url('https://via.placeholder.com/1920x800');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(84, 84, 84);
-    text-align: center;
+.hero { 
+    background-image: url('https://via.placeholder.com/1920x800'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 500px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: rgb(84, 84, 84); 
+    text-align: center; 
 }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+.hero h1 { 
+    font-size: 3em; 
+    margin-bottom: 20px; 
 }
 
-.hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
+.hero p { 
+    font-size: 1.5em; 
+    margin-bottom: 30px; 
 }
 
-.hero .cta-btn {
-    background-color: #ff6347;
-    padding: 15px 30px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
+.hero .cta-btn { 
+    background-color: #ff6347; 
+    padding: 15px 30px; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 1.2em; 
+    border-radius: 5px; 
 }
 
-.hero .cta-btn:hover {
-    background-color: #e5533e;
+.hero .cta-btn:hover { 
+    background-color: #e5533e; 
 }
 
 /* Imóveis em Destaque */
-.featured-properties {
-    padding: 50px 0;
-    text-align: center;
+.featured-properties { 
+    padding: 50px 0; 
+    text-align: center; 
 }
 
-.featured-properties h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+.featured-properties h2 { 
+    font-size: 2.5em; 
+    margin-bottom: 30px; 
 }
 
-.property-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas pequenas */
+.property-list { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas pequenas */ 
 }
 
-.property {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+.property { 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    text-align: center; 
 }
 
-.property img {
-    width: 100%;
-    border-radius: 10px;
+.property img { 
+    width: 100%; 
+    border-radius: 10px; 
 }
 
-.property h3 {
-    margin-top: 15px;
-    font-size: 1.5em;
+.property h3 { 
+    margin-top: 15px; 
+    font-size: 1.5em; 
 }
 
-.property p {
-    font-size: 1.2em;
-    color: #ff6347;
+.property p { 
+    font-size: 1.2em; 
+    color: #ff6347; 
 }
 
 /* Benefícios e Serviços */
-.services {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-    text-align: center;
+.services { 
+    background-color: #f9f9f9; 
+    padding: 50px 0; 
+    text-align: center; 
 }
 
-.services h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+.services h2 { 
+    font-size: 2.5em; 
+    margin-bottom: 30px; 
 }
 
-.service-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.service-list { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
-.service {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.service { 
+    width: 300px; 
+    padding: 20px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.service h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
+.service h3 { 
+    font-size: 1.8em; 
+    margin-bottom: 15px; 
 }
 
-.service p {
-    font-size: 1.1em;
+.service p { 
+    font-size: 1.1em; 
 }
 
 /* Depoimentos */
-.testimonials {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #eeeeee;
+.testimonials { 
+    padding: 50px 0; 
+    text-align: center; 
+    background-color: #eeeeee; 
 }
 
-.testimonials h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+.testimonials h2 { 
+    font-size: 2.5em; 
+    margin-bottom: 30px; 
 }
 
-.testimonial-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.testimonial-list { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.testimonial { 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.testimonial p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.testimonial p { 
+    font-size: 1.2em; 
+    margin-bottom: 10px; 
 }
 
-.testimonial span {
-    font-size: 1.1em;
-    font-style: italic;
-    color: #555;
+.testimonial span { 
+    font-size: 1.1em; 
+    font-style: italic; 
+    color: #555; 
 }
 
 /* Localizações Populares */
-.locations {
-    padding: 50px 0;
-    text-align: center;
+.locations { 
+    padding: 50px 0; 
+    text-align: center; 
 }
 
-.locations h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+.locations h2 { 
+    font-size: 2.5em; 
+    margin-bottom: 30px; 
 }
 
-.location-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.location-list { 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
-.location {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.location { 
+    width: 300px; 
+    padding: 20px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-.location h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
+.location h3 { 
+    font-size: 1.8em; 
+    margin-bottom: 15px; 
 }
 
-.location p {
-    font-size: 1.1em;
+.location p { 
+    font-size: 1.1em; 
 }
 
 /* Contato */
-.contact {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #f9f9f9;
+.contact { 
+    padding: 50px 0; 
+    text-align: center; 
+    background-color: #f9f9f9; 
 }
 
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.contact form { 
+    max-width: 600px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
 }
 
-.contact input,
-.contact textarea {
-    padding: 15px;
-    font-size: 1.2em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.contact input, .contact textarea { 
+    padding: 15px; 
+    font-size: 1.2em; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
 }
 
-.contact button {
-    padding: 15px;
-    background-color: #ff6347;
-    color: white;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.contact button { 
+    padding: 15px; 
+    background-color: #ff6347; 
+    color: white; 
+    font-size: 1.2em; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
-.contact button:hover {
-    background-color: #e5533e;
+.contact button:hover { 
+    background-color: #e5533e; 
 }
 
 /* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+footer { 
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 0; 
 }
 
 /* Media Query para telas menores (celulares e tablets) */
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block; /* Exibe o botão do menu */
+@media (max-width: 768px) { 
+    header nav ul { 
+        flex-direction: column; /* Colocar links em coluna */ 
+        padding: 20px 0; 
     }
 
-    nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        width: 100%;
+    header nav ul li { 
+        margin: 10px 0; 
     }
 
-    nav ul {
-        flex-direction: column;
-        padding: 10px 0;
+    .hero h1 { 
+        font-size: 2em; /* Diminui o tamanho do título no banner */ 
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .hero p { 
+        font-size: 1.2em; /* Diminui o tamanho do texto no banner */ 
+    }
+
+    .hero .cta-btn { 
+        font-size: 1em; /* Ajusta o tamanho do botão */ 
+        padding: 10px 20px; 
+    }
+
+    .property-list, .service-list, .testimonial-list, .location-list { 
+        flex-direction: column; /* Faz os itens ficarem em uma coluna */ 
+        gap: 30px; 
+    }
+
+    .property, .service, .testimonial, .location { 
+        width: 90%; /* Ajusta a largura dos itens */ 
+    }
+
+    .property h3 { 
+        font-size: 1.3em; /* Ajusta o tamanho do título */ 
+    }
+
+    .property p { 
+        font-size: 1em; /* Ajusta o tamanho da descrição */ 
+    }
+
+    .services h2, .testimonials h2, .locations h2 { 
+        font-size: 2em; /* Ajusta o tamanho do título desejado */ 
+    }
+
+    .contact form { 
+        width: 90%; 
+    }
+
+    .contact input, .contact textarea { 
+        font-size: 1em; /* Ajuste no tamanho das fontes dos inputs */ 
+    }
+
+    .contact button { 
+        font-size: 1em; /* Ajuste no tamanho do botão */ 
     }
 }
 
 /* Media Query para telas muito pequenas (smartphones, por exemplo) */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5em;
+@media (max-width: 480px) { 
+    .hero h1 { 
+        font-size: 1.5em; /* Ajuste ainda mais no título */ 
     }
 
-    .hero p {
-        font-size: 1em;
+    .hero p { 
+        font-size: 1em; /* Ajuste do texto no banner */ 
     }
 
-    .property {
-        width: 100%;
+    .property { 
+        width: 100%; /* Faz os imóveis ocupam toda a largura */ 
     }
 
-    .property img {
-        height: auto;
+    .property img { 
+        height: auto; /* Ajusta a imagem */ 
     }
 
-    .property h3 {
-        font-size: 1.2em;
+    .property h3 { 
+        font-size: 1.2em; /* Ajuste no título */ 
     }
 
-    .property p {
-        font-size: 0.9em;
+    .property p { 
+        font-size: 0.9em; /* Ajuste na descrição */ 
     }
 }
