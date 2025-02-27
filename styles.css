@@ -12,17 +12,44 @@ body {
     color: #333;
 }
 
-/* Botão do Menu Hambúrguer */
-.menu-icon {
-    display: block;
-    cursor: pointer;
-    position: fixed; /* Fixa no canto superior esquerdo */
-    top: 20px; /* Distância do topo */
-    left: 20px; /* Distância da esquerda */
-    z-index: 101; /* Fica acima de outros conteúdos */
+/* Estilo do menu */
+#menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* O menu começa fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    transition: left 0.3s ease;
+    z-index: 100;
+    padding-top: 60px; /* Espaçamento superior */
 }
 
-.menu-icon .bar {
+#menu a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#menu a:hover {
+    background-color: #444;
+}
+
+/* Estilo do botão do menu */
+.menu-toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101; /* Fica acima do menu */
+}
+
+.menu-toggle-btn div {
     width: 30px;
     height: 5px;
     background-color: #333;
@@ -30,48 +57,17 @@ body {
     transition: 0.3s;
 }
 
-/* Menu */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    width: 100%;
-    left: 0;
-    flex-direction: column;
-    align-items: center;
-    display: none; /* O menu começa escondido */
+/* Modifica o botão de 3 barras para um "X" quando o menu estiver aberto */
+.menu-toggle-btn.open div:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.menu-toggle-btn.open div:nth-child(2) {
+    opacity: 0;
 }
 
-nav ul li {
-    margin: 15px 0;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    text-transform: uppercase;
-}
-
-nav ul li a:hover {
-    color: #b0b0b0;
-}
-
-/* Ocultar o menu por padrão */
-.hidden {
-    display: none;
-}
-
-/* Mostrar o menu quando a classe hidden for removida */
-nav.show {
-    display: flex;
+.menu-toggle-btn.open div:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
 }
 
 /* Banner Principal */
@@ -108,195 +104,4 @@ nav.show {
 
 .hero .cta-btn:hover {
     background-color: #e5533e;
-}
-
-/* Imóveis em Destaque */
-.featured-properties {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.featured-properties h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.property-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.property {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-
-.property img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.property h3 {
-    margin-top: 15px;
-    font-size: 1.5em;
-}
-
-.property p {
-    font-size: 1.2em;
-    color: #ff6347;
-}
-
-/* Benefícios e Serviços */
-.services {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.service-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.service {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.service h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.service p {
-    font-size: 1.1em;
-}
-
-/* Depoimentos */
-.testimonials {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #eeeeee;
-}
-
-.testimonials h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.testimonial-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.testimonial span {
-    font-size: 1.1em;
-    font-style: italic;
-    color: #555;
-}
-
-/* Localizações Populares */
-.locations {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.locations h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.location-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.location {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.location h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.location p {
-    font-size: 1.1em;
-}
-
-/* Formulário de Contato */
-.contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact input,
-.contact textarea {
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1em;
-}
-
-.contact button {
-    padding: 15px 30px;
-    background-color: #ff6347;
-    color: white;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-}
-
-.contact button:hover {
-    background-color: #e5533e;
-}
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
