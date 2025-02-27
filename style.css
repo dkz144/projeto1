@@ -15,20 +15,17 @@ body {
 header {
     background-color: #333333; /* Cinza escuro */
     color: #f1f1f1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
     width: 100%;
-}
-
-/* Logo */
-.logo {
-    font-size: 2em;
-    font-weight: bold;
+    padding: 10px 0;
 }
 
 /* Menu de navegação */
+nav {
+    display: flex;
+    justify-content: center; /* Centraliza o menu no meio da tela */
+    align-items: center;
+}
+
 nav ul {
     display: flex;
     list-style: none;
