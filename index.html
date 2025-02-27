@@ -4,7 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corretora de Imóveis</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos do menu */
+        #menu {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Menu começa escondido à esquerda */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        #menu ul li {
+            margin: 20px 0;
+        }
+
+        #menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+
+        /* Botão do Menu (3 Barras) */
+        .menu-icon {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        .menu-icon .bar {
+            width: 100%;
+            height: 5px;
+            background-color: #333;
+            border-radius: 3px;
+        }
+
+        /* Quando o menu está aberto */
+        #menu.open {
+            left: 0; /* Exibe o menu */
+        }
+    </style>
 </head>
 <body>
 
@@ -16,7 +70,7 @@
     </div>
 
     <!-- Menu (inicialmente escondido) -->
-    <nav id="menu" class="hidden">
+    <nav id="menu">
         <ul>
             <li><a href="#">Início</a></li>
             <li><a href="imoveis.html">Imóveis</a></li>
@@ -128,34 +182,12 @@
         <p>&copy; 2025 Corretora Imobiliária X | Todos os direitos reservados.</p>
     </footer>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      // Inicializa o EmailJS com seu User ID
-      (function() {
-        emailjs.init("Ffdo11ZUv5xI3n0T7"); // Substitua YOUR_USER_ID pelo seu User ID
-      })();
-
-      // Função para enviar o formulário quando ele for enviado
-      document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault();  // Previne o comportamento padrão de envio do formulário
-
-        var form = event.target;
-
-        // Envia o formulário para o EmailJS usando o Service ID e Template ID
-        emailjs.sendForm("service_4igai0e", "template_l0ickar", form)
-          .then(function(response) {
-            alert('Mensagem enviada com sucesso!');
-          }, function(error) {
-            alert('Erro ao enviar a mensagem');
-          });
-      });
-
-      // Script para alternar o menu
       const menuToggle = document.getElementById("menu-toggle");
       const menu = document.getElementById("menu");
 
       menuToggle.addEventListener("click", function() {
-        menu.classList.toggle("hidden"); // Alterna a classe "hidden"
+        menu.classList.toggle("open");  // Alterna a classe "open" para mostrar/ocultar o menu
       });
     </script>
 </body>
