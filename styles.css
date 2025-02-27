@@ -80,287 +80,7 @@ header nav ul li a:hover {
     background-color: #e5533e; 
 }
 
-/* Imóveis em Destaque */
-.featured-properties { 
-    padding: 50px 0; 
-    text-align: center; 
-}
-
-.featured-properties h2 { 
-    font-size: 2.5em; 
-    margin-bottom: 30px; 
-}
-
-.property-list { 
-    display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-    flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas pequenas */ 
-}
-
-.property { 
-    background-color: #fff; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    width: 300px; 
-    text-align: center; 
-}
-
-.property img { 
-    width: 100%; 
-    border-radius: 10px; 
-}
-
-.property h3 { 
-    margin-top: 15px; 
-    font-size: 1.5em; 
-}
-
-.property p { 
-    font-size: 1.2em; 
-    color: #ff6347; 
-}
-
-/* Benefícios e Serviços */
-.services { 
-    background-color: #f9f9f9; 
-    padding: 50px 0; 
-    text-align: center; 
-}
-
-.services h2 { 
-    font-size: 2.5em; 
-    margin-bottom: 30px; 
-}
-
-.service-list { 
-    display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-    flex-wrap: wrap; 
-}
-
-.service { 
-    width: 300px; 
-    padding: 20px; 
-    background-color: #fff; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.service h3 { 
-    font-size: 1.8em; 
-    margin-bottom: 15px; 
-}
-
-.service p { 
-    font-size: 1.1em; 
-}
-
-/* Depoimentos */
-.testimonials { 
-    padding: 50px 0; 
-    text-align: center; 
-    background-color: #eeeeee; 
-}
-
-.testimonials h2 { 
-    font-size: 2.5em; 
-    margin-bottom: 30px; 
-}
-
-.testimonial-list { 
-    display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-    flex-wrap: wrap; 
-}
-
-.testimonial { 
-    background-color: #fff; 
-    padding: 20px; 
-    border-radius: 10px; 
-    width: 300px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.testimonial p { 
-    font-size: 1.2em; 
-    margin-bottom: 10px; 
-}
-
-.testimonial span { 
-    font-size: 1.1em; 
-    font-style: italic; 
-    color: #555; 
-}
-
-/* Localizações Populares */
-.locations { 
-    padding: 50px 0; 
-    text-align: center; 
-}
-
-.locations h2 { 
-    font-size: 2.5em; 
-    margin-bottom: 30px; 
-}
-
-.location-list { 
-    display: flex; 
-    justify-content: center; 
-    gap: 20px; 
-    flex-wrap: wrap; 
-}
-
-.location { 
-    width: 300px; 
-    padding: 20px; 
-    background-color: #fff; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.location h3 { 
-    font-size: 1.8em; 
-    margin-bottom: 15px; 
-}
-
-.location p { 
-    font-size: 1.1em; 
-}
-
-/* Contato */
-.contact { 
-    padding: 50px 0; 
-    text-align: center; 
-    background-color: #f9f9f9; 
-}
-
-.contact form { 
-    max-width: 600px; 
-    margin: 0 auto; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 15px; 
-}
-
-.contact input, .contact textarea { 
-    padding: 15px; 
-    font-size: 1.2em; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-}
-
-.contact button { 
-    padding: 15px; 
-    background-color: #ff6347; 
-    color: white; 
-    font-size: 1.2em; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-}
-
-.contact button:hover { 
-    background-color: #e5533e; 
-}
-
-/* Rodapé */
-footer { 
-    background-color: #333; 
-    color: white; 
-    text-align: center; 
-    padding: 20px 0; 
-}
-
-/* Media Query para telas menores (celulares e tablets) */
-@media (max-width: 768px) { 
-    header nav ul { 
-        flex-direction: column; /* Colocar links em coluna */ 
-        padding: 20px 0; 
-    }
-
-    header nav ul li { 
-        margin: 10px 0; 
-    }
-
-    .hero h1 { 
-        font-size: 2em; /* Diminui o tamanho do título no banner */ 
-    }
-
-    .hero p { 
-        font-size: 1.2em; /* Diminui o tamanho do texto no banner */ 
-    }
-
-    .hero .cta-btn { 
-        font-size: 1em; /* Ajusta o tamanho do botão */ 
-        padding: 10px 20px; 
-    }
-
-    .property-list, .service-list, .testimonial-list, .location-list { 
-        flex-direction: column; /* Faz os itens ficarem em uma coluna */ 
-        gap: 30px; 
-    }
-
-    .property, .service, .testimonial, .location { 
-        width: 90%; /* Ajusta a largura dos itens */ 
-    }
-
-    .property h3 { 
-        font-size: 1.3em; /* Ajusta o tamanho do título */ 
-    }
-
-    .property p { 
-        font-size: 1em; /* Ajusta o tamanho da descrição */ 
-    }
-
-    .services h2, .testimonials h2, .locations h2 { 
-        font-size: 2em; /* Ajusta o tamanho do título desejado */ 
-    }
-
-    .contact form { 
-        width: 90%; 
-    }
-
-    .contact input, .contact textarea { 
-        font-size: 1em; /* Ajuste no tamanho das fontes dos inputs */ 
-    }
-
-    .contact button { 
-        font-size: 1em; /* Ajuste no tamanho do botão */ 
-    }
-}
-
-/* Media Query para telas muito pequenas (smartphones, por exemplo) */
-@media (max-width: 480px) { 
-    .hero h1 { 
-        font-size: 1.5em; /* Ajuste ainda mais no título */ 
-    }
-
-    .hero p { 
-        font-size: 1em; /* Ajuste do texto no banner */ 
-    }
-
-    .property { 
-        width: 100%; /* Faz os imóveis ocupam toda a largura */ 
-    }
-
-    .property img { 
-        height: auto; /* Ajusta a imagem */ 
-    }
-
-    .property h3 { 
-        font-size: 1.2em; /* Ajuste no título */ 
-    }
-
-    .property p { 
-        font-size: 0.9em; /* Ajuste na descrição */ 
-    }
-}
-
-/* Estilo para o menu hambúrguer */
+/* Menu Hambúrguer */
 .menu-icon {
     width: 30px;
     height: 25px;
@@ -371,7 +91,7 @@ footer {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 101; /* Garante que o ícone fique acima do conteúdo */
+    z-index: 101;
 }
 
 .bar {
@@ -383,16 +103,16 @@ footer {
 #menu {
     position: fixed;
     top: 0;
-    right: -250px; /* Inicialmente o menu fica escondido à direita */
+    right: -250px;
     width: 250px;
     height: 100%;
     background-color: #333;
     transition: right 0.3s ease;
-    z-index: 100; /* Fica atrás do ícone */
+    z-index: 100;
 }
 
 #menu.show {
-    right: 0; /* Quando a classe "show" for adicionada, o menu aparece */
+    right: 0;
 }
 
 #menu ul {
@@ -413,5 +133,17 @@ footer {
 }
 
 #menu ul li a:hover {
-    color: #ff6347; /* Cor de destaque ao passar o mouse */
+    color: #ff6347;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
 }
