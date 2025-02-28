@@ -31,7 +31,24 @@ header {
     justify-content: center;
 }
 
-/* Menu Hambúrguer */
+/* Estilo do menu lateral */
+#menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Começa escondido fora da tela */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: right 0.3s ease-in-out; /* Efeito suave */
+    z-index: 1000;
+}
+
+/* Quando o menu estiver aberto */
+#menu.show {
+    right: 0; /* Move o menu para dentro da tela */
+}
+
+/* Ícone do menu hambúrguer */
 .menu-icon {
     width: 30px;
     height: 25px;
@@ -39,29 +56,18 @@ header {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 101;
+    z-index: 1010;
 }
 
 .bar {
     height: 5px;
-    background-color: #333;
+    background-color: white;
     border-radius: 5px;
 }
 
-/* Menu (inicialmente escondido) */
-#menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    transition: right 0.3s ease;
-    z-index: 100;
-}
 
 /* Menu lateral */
 #menu {
