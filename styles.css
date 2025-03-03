@@ -235,9 +235,7 @@ footer {
 
 
 
-footer p {
-    font-size: 1em;
-}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -252,7 +250,7 @@ footer p {
 }
 
 .menu-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
 }
@@ -276,7 +274,15 @@ footer p {
     display: flex;
     flex-direction: column;
     padding-top: 60px;
-    transition: 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.nav-list.nav-active {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
 }
 
 .nav-list li {
@@ -287,10 +293,6 @@ footer p {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-}
-
-.nav-active {
-    left: 0;
 }
 
 @media (max-width: 768px) {
