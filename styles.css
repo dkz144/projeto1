@@ -1,0 +1,238 @@
+/* Redefinir margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Banner Principal */
+.hero {
+  background-image: url("https://via.placeholder.com/1920x800");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(84, 84, 84);
+  text-align: center;
+  width: 100%;
+  margin-top: 100px; /* para dar espaço após o cabeçalho fixo */
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.hero .cta-btn {
+  background-color: #ff6347;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.hero .cta-btn:hover {
+  background-color: #e5533e;
+}
+
+/* Imóveis em Destaque */
+.featured-properties {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.featured-properties h2 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.property-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.property {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.property h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.property p {
+  font-size: 1.2em;
+  color: #ff6347;
+}
+
+/* Benefícios e Serviços */
+.services {
+  background-color: #fafafa;
+  padding: 50px 0;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+}
+
+.service h3 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.service p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Depoimentos */
+.testimonials {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.testimonial {
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Localizações Populares */
+.locations {
+  padding: 50px 0;
+}
+
+.location-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.location {
+  width: 250px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.location p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Contato */
+.contact {
+  background-color: #fafafa;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact button {
+  padding: 12px 30px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #e5533e;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1em;
+}
